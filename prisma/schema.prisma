@@ -1,6 +1,11 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+enum Role {
+  USER
+  ADMIN
+}
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,4 +13,78 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Trip {
+  id            String @id @default(uuid())
+  title         String
+  country       String 
+  duration      Int
+  price         Int
+  maxPeopleAmount Int
+  mainPhoto     String?
+  description   String @db.VarChar(1000)
+  extraOptions  TripExtraOptions[]
+
+  photos        Photos[]
+  orders        TripsOnOrders[]
+}
+
+model Photos {
+  id        String @id @default(uuid())
+  photo     String
+
+  trip      Trip? @relation(fields: [tripId], references: [id], onDelete: SetNull)
+  tripId    String?
+}
+
+model TripExtraOptions {
+  id        String @id @default(uuid())
+  name      String
+  price     Int
+  photo     String
+
+  trip      Trip? @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  tripId    String?
+  order     Order? @relation(fields: [orderId], references: [id], onDelete: SetNull)
+  orderId   String? 
+}
+
+model Order {
+  id        String @id @default(uuid())
+  user      User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userId    String?
+  remarks   String
+  extraOptions  TripExtraOptions[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  trips TripsOnOrders[]
+}
+
+model TripsOnOrders {
+  trip          Trip @relation(fields: [tripId], references: [id])
+  tripId        String
+  order         Order @relation(fields: [orderId], references: [id])
+  orderId       String
+  peopleAmount  Int
+
+  @@id([tripId, orderId])
+}
+
+model User {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  role      Role      @default(USER)
+  password  Password?
+
+  orders    Order[]
+}
+
+model Password {
+  id       String @id @default(uuid())
+  hashedPassword String
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId   String @unique
 }
