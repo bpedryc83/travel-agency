@@ -51,17 +51,17 @@ model TripExtraOptions {
 }
 
 model Order {
-  id        String @id @default(uuid())
-  user      User? @relation(fields: [userId], references: [id], onDelete: SetNull)
-  userId    String?
-  remarks   String
+  id            String           @id @default(uuid())
+  user          User?            @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userId        String?
+  remarks       String
   extraOptions  TripExtraOptions[]
+  trips         TripsOnOrders[]
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  trips TripsOnOrders[]
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
 }
+
 
 model TripsOnOrders {
   trip          Trip @relation(fields: [tripId], references: [id])
