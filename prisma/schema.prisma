@@ -22,19 +22,19 @@ model Trip {
   duration      Int
   price         Int
   maxPeopleAmount Int
-  mainPhoto     String?
+  mainPhoto     String
   description   String @db.VarChar(1000)
   extraOptions  TripExtraOptions[]
 
-  photos        Photos[]
+  photos        tripPhoto[]
   orders        TripsOnOrders[]
 }
 
-model Photos {
+model tripPhoto {
   id        String @id @default(uuid())
   photo     String
 
-  trip      Trip? @relation(fields: [tripId], references: [id], onDelete: SetNull)
+  trip      Trip? @relation(fields: [tripId], references: [id], onDelete: Cascade)
   tripId    String?
 }
 
@@ -66,7 +66,7 @@ model Order {
 model TripsOnOrders {
   trip          Trip @relation(fields: [tripId], references: [id])
   tripId        String
-  order         Order @relation(fields: [orderId], references: [id])
+  order         Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
   orderId       String
   peopleAmount  Int
 

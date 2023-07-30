@@ -10,9 +10,28 @@ export class TripsService {
     return this.prismaService.trip.findMany();
   }
 
+  public getAllExtended(): Promise<Trip[]> {
+    return this.prismaService.trip.findMany({
+      include: {
+        orders: true,
+        photos: true,
+      },
+    });
+  }
+
   public getById(id: Trip['id']): Promise<Trip | null> {
     return this.prismaService.trip.findUnique({
       where: { id },
+    });
+  }
+
+  public getExtendedById(id: Trip['id']): Promise<Trip | null> {
+    return this.prismaService.trip.findUnique({
+      where: { id },
+      include: {
+        orders: true,
+        photos: true,
+      },
     });
   }
 
@@ -20,21 +39,19 @@ export class TripsService {
     photo: string,
     tripData: Omit<Trip, 'id' | 'mainPhoto'>,
   ): Promise<Trip> {
-    if (photo) {
-      return this.prismaService.trip.create({
-        data: { ...tripData, mainPhoto: photo },
-      });
-    } else {
-      return this.prismaService.trip.create({
-        data: { ...tripData },
-      });
-    }
+    return this.prismaService.trip.create({
+      data: { ...tripData, mainPhoto: photo },
+    });
   }
 
-  public updateById(id: Trip['id'], tripData: Omit<Trip, 'id'>): Promise<Trip> {
+  async updateById(
+    id: Trip['id'],
+    photo: string,
+    tripData: Omit<Trip, 'id' | 'mainPhoto'>,
+  ): Promise<Trip> {
     return this.prismaService.trip.update({
       where: { id },
-      data: tripData,
+      data: { ...tripData, mainPhoto: photo },
     });
   }
 

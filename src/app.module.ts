@@ -12,6 +12,7 @@ import { OrdersModule } from './orders/orders.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { MulterModule } from '@nestjs/platform-express';
+import { PhotosModule } from './photos/photos.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { MulterModule } from '@nestjs/platform-express';
     MulterModule.register({
       dest: './public/uploads',
     }),
+    PhotosModule,
   ],
   controllers: [AppController],
   providers: [AppService],

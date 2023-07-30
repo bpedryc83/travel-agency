@@ -1,4 +1,4 @@
-import { IsInt, IsNotEmpty, Length, IsString, Min } from 'class-validator';
+import { IsNotEmpty, Length, IsString, Matches } from 'class-validator';
 
 export class UpdateTripDTO {
   @IsNotEmpty()
@@ -12,19 +12,22 @@ export class UpdateTripDTO {
   country: string;
 
   @IsNotEmpty()
-  @IsInt()
-  @Min(1)
-  duration: number;
+  @IsString()
+  @Length(1, 2)
+  @Matches(/^[0-9]+$/)
+  duration: string;
 
   @IsNotEmpty()
-  @IsInt()
-  @Min(1)
-  price: number;
+  @IsString()
+  @Length(1, 5)
+  @Matches(/^[0-9]+$/)
+  price: string;
 
   @IsNotEmpty()
-  @IsInt()
-  @Min(1)
-  maxPeopleAmount: number;
+  @IsString()
+  @Length(1, 2)
+  @Matches(/^[0-9]+$/)
+  maxPeopleAmount: string;
 
   mainPhoto: string | null;
 

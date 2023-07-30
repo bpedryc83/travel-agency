@@ -29,7 +29,7 @@ export class CreateTripDTO {
   @Matches(/^[0-9]+$/)
   maxPeopleAmount: string;
 
-  mainPhoto: string | null;
+  mainPhoto: string;
 
   @IsNotEmpty()
   @IsString()

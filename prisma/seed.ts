@@ -51,6 +51,7 @@ function getTrips() {
       duration: 6,
       price: 4800,
       maxPeopleAmount: 3,
+      mainPhoto: './public/uploads/P7090988.JPG',
       description: 'Purus viverra accumsan in nisl nisi scelerisque eu. Eu volutpat odio facilisis mauris. Sit amet justo donec enim. Sit amet nisl suscipit adipiscing bibendum est. Morbi leo urna molestie at. Risus ultricies tristique nulla aliquet enim. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi.',
     },
   ];
@@ -97,25 +98,164 @@ function getOrders() {
   ]
 }
 
-// function getPhotos() {
-//   return [
-//     {
-//       id: '260d513b-0678-4fba-849a-fabb8811f2e7',
-//       name: 'John Doe',
-//       address: 'Warszawa, górzysta 30',
-//     },
-//     {
-//       id: '9541bda3-4168-4404-b6b3-b40639714fef',
-//       name: 'Amanda Nick',
-//       address: 'Katowice, śląska 1',
-//     },
-//   ]
-// }
+function getTripPhotos() {
+  return [
+    {
+      id: '9aab0e96-886c-417a-b8ba-2d246ea662c4',         //trip Austria
+      tripId: '508cc17e-f94e-48c6-8567-f6daf5b4a519',
+      photo: './public/uploads/IMG_20230501_162447.jpg',
+    },
+    {
+      id: 'd9c5e6b7-248c-495a-a439-e8e0481ee3e1',
+      tripId: '508cc17e-f94e-48c6-8567-f6daf5b4a519',
+      photo: './public/uploads/IMG_20230501_171738.jpg',
+    },
+    {
+      id: 'f0165534-ff93-4318-b3e6-f83b3bcdd655',
+      tripId: '508cc17e-f94e-48c6-8567-f6daf5b4a519',
+      photo: './public/uploads/IMG_20230505_182342.jpg',
+    },
+    {
+      id: 'ea355de9-5a25-48cb-9f71-15bc77bc7a99',
+      tripId: '508cc17e-f94e-48c6-8567-f6daf5b4a519',
+      photo: './public/uploads/IMG_20230505_183547.jpg',
+    },
+    {
+      id: '672c3cd5-ffd9-469c-95ec-32c2533aa1b9',
+      tripId: '508cc17e-f94e-48c6-8567-f6daf5b4a519',
+      photo: './public/uploads/IMG_20230505_195939.jpg',
+    },
+    {
+      id: 'ce4b3293-e742-479e-9939-bb9630c94282',         //trip France
+      tripId: 'ace8ca36-9bf5-4cbe-b01b-e24853975f4f',
+      photo: './public/uploads/P7060878.JPG',
+    },
+    {
+      id: '7c5822f3-8904-4b63-b410-2978a00ffb89',
+      tripId: 'ace8ca36-9bf5-4cbe-b01b-e24853975f4f',
+      photo: './public/uploads/P7080915.JPG',
+    },
+    {
+      id: 'e43f27f0-3307-404e-be4e-06d58ab9b43b',
+      tripId: 'ace8ca36-9bf5-4cbe-b01b-e24853975f4f',
+      photo: './public/uploads/P7080941.JPG',
+    },
+    {
+      id: '160cf797-f3a9-473e-97d6-69f4fc67efb6',
+      tripId: 'ace8ca36-9bf5-4cbe-b01b-e24853975f4f',
+      photo: './public/uploads/P7090977.JPG',
+    },
+    {
+      id: 'ccaa9501-5aeb-48ee-ae6f-3d7c9b3f2db5',
+      tripId: 'ace8ca36-9bf5-4cbe-b01b-e24853975f4f',
+      photo: './public/uploads/P7090988.JPG',
+    },
+    {
+      id: 'e64ac15d-d563-4f9a-b72c-248813e7dfd5',
+      tripId: 'ace8ca36-9bf5-4cbe-b01b-e24853975f4f',
+      photo: './public/uploads/P7091034.JPG',
+    },
+    {
+      id: '97c1417a-9d84-49e1-92bd-905679851011',         //trip Italy
+      tripId: '86b840a2-ae2e-4af0-a17d-5714a4afad48',
+      photo: './public/uploads/DSCN5205.JPG',
+    },
+    {
+      id: 'b5a6b6c5-829c-488a-9369-1b3b685e27ed',
+      tripId: '86b840a2-ae2e-4af0-a17d-5714a4afad48',
+      photo: './public/uploads/DSCN5207.JPG',
+    },
+    {
+      id: '721fbec1-9d2b-4964-b4da-f89bc3ff5339',
+      tripId: '86b840a2-ae2e-4af0-a17d-5714a4afad48',
+      photo: './public/uploads/DSCN5287.JPG',
+    },
+    {
+      id: 'a32dcf24-c8c1-487a-b71b-10313223f960',
+      tripId: '86b840a2-ae2e-4af0-a17d-5714a4afad48',
+      photo: './public/uploads/DSCN5307.JPG',
+    },
+    {
+      id: '46e3a159-15e6-4de3-87e7-e23683c806db',
+      tripId: '86b840a2-ae2e-4af0-a17d-5714a4afad48',
+      photo: './public/uploads/DSCN5322.JPG',
+    },
+    {
+      id: 'e927d27b-91a2-474b-8a4e-238dd2e0fd9b',
+      tripId: '86b840a2-ae2e-4af0-a17d-5714a4afad48',
+      photo: './public/uploads/DSCN5334.JPG',
+    },
+    {
+      id: '4556dbcf-63ae-4f47-9328-8c3ab2ee43d7',         //trip Poland
+      tripId: '6e9a20ad-3b04-4e52-809e-a1fd4e8860da',
+      photo: './public/uploads/P1180883.JPG',
+    },
+    {
+      id: 'b862bbb4-30fa-4283-835b-f5a170af107d',
+      tripId: '6e9a20ad-3b04-4e52-809e-a1fd4e8860da',
+      photo: './public/uploads/DSCN0965.JPG',
+    },
+    {
+      id: '2850348d-3a34-4643-b1f9-e731de1a44d1',
+      tripId: '6e9a20ad-3b04-4e52-809e-a1fd4e8860da',
+      photo: './public/uploads/P1180906.JPG',
+    },
+    {
+      id: '39586e14-f36f-4955-9b7d-1c902d046ff3',
+      tripId: '6e9a20ad-3b04-4e52-809e-a1fd4e8860da',
+      photo: './public/uploads/P1180911.JPG',
+    },
+    {
+      id: '2156e201-ab1a-40fc-9ac6-b279da349a3d',
+      tripId: '6e9a20ad-3b04-4e52-809e-a1fd4e8860da',
+      photo: './public/uploads/P1200225.JPG',
+    },
+    {
+      id: '7d8c684a-1737-4ab2-bf09-6af310810474',         //trip Romania
+      tripId: '475dad93-e471-4299-9d6a-1246715ca9da',
+      photo: './public/uploads/IMG_20220616_185340.jpg',
+    },
+    {
+      id: 'fcb8e766-a77b-4541-b62d-11508c1d127c',
+      tripId: '475dad93-e471-4299-9d6a-1246715ca9da',
+      photo: './public/uploads/IMG_20220617_094554.jpg',
+    },
+    {
+      id: '9b7341d9-70ef-45e6-b0d0-d8be8b778077',
+      tripId: '475dad93-e471-4299-9d6a-1246715ca9da',
+      photo: './public/uploads/IMG_20220617_102657.jpg',
+    },
+    {
+      id: 'd941818a-ccf6-4fae-a859-c7b9de5135d0',
+      tripId: '475dad93-e471-4299-9d6a-1246715ca9da',
+      photo: './public/uploads/IMG_20220618_123158.jpg',
+    },
+    {
+      id: 'd84f0e84-4764-44ca-ace7-6f7894ce002d',
+      tripId: '475dad93-e471-4299-9d6a-1246715ca9da',
+      photo: './public/uploads/IMG_20220619_073604.jpg',
+    },
+  ]
+}
 
 async function seed() {
+  
   await Promise.all(
     getTrips().map((trip) => {
       return db.trip.create({ data: trip });
+    }),
+  );
+
+  await Promise.all(
+    getTripPhotos().map(({ tripId, ...tripPhotoData }) => {
+      return db.tripPhoto.create({
+        data: {
+          ...tripPhotoData,
+          trip: {
+            connect: { id: tripId },
+          }
+        }
+      })
     }),
   );
 
