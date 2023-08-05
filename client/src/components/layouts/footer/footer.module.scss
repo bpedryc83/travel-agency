@@ -1,0 +1,27 @@
+@import './../../../styles/settings.scss';
+
+.footerRow {
+  width: 95%;
+  min-height: 50px;
+  border-top: 1px solid $color-light;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.footerColumn {
+  height: 100%;
+}
+
+.textFooter {
+  text-align: center;
+  font-family: $font-menu-footer;
+  font-size: 16px;
+  color: black;
+}
+
+@media (max-width: 640px) {
+  .textFooter {
+    font-size: 12px
+  }
+}

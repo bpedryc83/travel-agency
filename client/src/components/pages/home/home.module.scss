@@ -1,0 +1,77 @@
+@import './../../../styles/settings.scss';
+
+.mainGrid {
+  width: 95%;
+  flex-wrap: wrap-reverse;
+}
+
+.leftColumn {
+  width: 55%;
+  min-width: 224px;
+  display: block;
+}
+
+.rightColumn {
+  min-width: 184px;
+  width: 45%;
+}
+
+.sentence {
+  height: 50%;
+  padding-right: 10px;
+  text-align: center;
+  font-family: $font-decorative;
+  font-size: 44px;
+  font-weight: bold;
+  border-bottom: 1px solid $color-light;
+}
+
+.aboutUs {
+  height: 50%;
+}
+
+@media (max-width: 1024px) {
+  .sentence {
+    font-size: 36px
+  }
+}
+
+@media (max-width: 840px) {
+  .sentence {
+    font-size: 28px
+  }
+}
+
+@media (max-width: 770px) {
+  .sentence {
+    font-size: 22px
+  }
+}
+
+@media (max-width: 576px) {
+  .leftColumn {
+    width: 95%;
+    margin: auto auto;
+    text-align: center;
+    justify-content: center;
+  }
+  .rightColumn {
+    width: 95%;
+  }
+  .sentence {
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    margin: auto auto;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 470px) {
+  .leftColumn {
+    min-width: 184px;
+  }
+  .sentence {
+    font-size: 18px;
+  }
+}

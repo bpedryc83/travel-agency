@@ -1,0 +1,67 @@
+@import './settings.scss';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-main-background;
+  font-family: $font-text;
+  font-size: ($base-size * 1.1);
+  color: $font-main-color;
+  letter-spacing: 0.5px;
+}
+
+:global(.container) {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mainContainer {
+  width: 85%;
+  max-width: 1400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  background-color: $color-main-panel;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
