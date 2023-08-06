@@ -1,0 +1,22 @@
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.divImage {
+  width: 50%;
+  min-width: 250px;
+}
+
+.image {
+  padding: 10px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+  .divImage {
+    width: 100%;
+  }
+}

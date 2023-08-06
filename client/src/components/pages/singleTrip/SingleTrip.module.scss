@@ -1,4 +1,89 @@
-.mainGrid {
+@import './../../../styles/settings.scss';
+
+.row {
+  min-width: 100%;
+}
+
+.mainDiv {
   width: 95%;
-  flex-wrap: wrap-reverse;
+  padding: 15px 0;
+  margin: auto auto;
+}
+
+.title {
+  padding: 7px 12px;
+  margin: auto auto;
+  font-size: 18px;
+  background-color: $color-secondary;
+  color: white;
+  border-radius: 20px;
+}
+
+.grid {
+  padding-top: 10px;
+  width: 95%;
+  margin: auto auto;
+  flex-wrap: wrap;
+}
+
+.pictureColumn {
+  width: 60%;
+  min-width: 300px;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dataColumn {
+  padding-left: 20px;
+  width: 40%;
+  .first {
+    padding-top: 8px;
+    border-top: 1px solid $color-light;
+  }
+  .last {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $color-light;
+  }
+}
+
+
+.description {
+  text-align: justify;
+}
+
+.photosHeader {
+  margin: auto auto;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.line {
+  width: 50%;
+  margin: auto auto;
+  border-bottom: 1px solid $color-light;
+}
+
+@media (max-width: 767px) {
+  .pictureColumn {
+    width: 100%;
+  }
+  .dataColumn {
+    margin-top: 25px;
+    width: 100%;
+    .first {
+      padding-top: 18px;
+    }
+    .last {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+  
 }

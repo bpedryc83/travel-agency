@@ -3,6 +3,7 @@ import { API_URL } from '../config';
 
 // selectors
 export const getAllTrips = state => state.trips.data.slice().reverse();
+export const getTripById = ({ trips }, id) => trips.data.find(trip => trip.id === id);
 
 // action name creator
 const reducerName = 'trips';
@@ -27,7 +28,7 @@ export const loadTripsRequest = () => {
     dispatch(startRequest({ name: 'LOAD_TRIPS' }));
     try {
 
-      let res = await axios.get(`${API_URL}/api/trips`);
+      let res = await axios.get(`${API_URL}/api/trips/extended`);
 
       dispatch(loadTrips(res.data));
       dispatch(endRequest({ name: 'LOAD_TRIPS' }));
