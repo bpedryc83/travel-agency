@@ -1,0 +1,15 @@
+import styles from './DrawTripsGrid.module.scss';
+import DrawTripInList from '../drawTripInList/DrawTripInList';
+
+const DrawTripsGrid = props => {
+
+  console.log('props', props);
+
+  return (
+  <div className={`pt-3 ${styles.gridContainer}`}>
+    {props.tripsToDraw.map(trip => <DrawTripInList key={trip.id} { ...trip }/>)}
+  </div>
+  )
+}
+
+export default DrawTripsGrid;

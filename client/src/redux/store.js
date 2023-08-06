@@ -1,9 +1,14 @@
 import {createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import tripsReducer from './tripsRedux';
 
-//const reducer = combineReducers(subreducers);
+const subreducers = {
+  trips: tripsReducer,
+};
+
+const reducer = combineReducers(subreducers);
 const store = createStore (
-//  reducer,
+  reducer,
   compose(
     applyMiddleware(thunk),
     window.__REDUX_DEVTOOLS_EXTENSION__

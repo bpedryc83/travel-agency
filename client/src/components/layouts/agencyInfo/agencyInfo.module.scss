@@ -46,7 +46,7 @@
   .divBackground {
     height: 80%;
     width: 100%;
-    background-color: rgb(212, 219, 208);
+    background-color: $color-light-background;
     border-radius: 7px;
     clip-path: polygon(0 0, 90% 0, 100% 40%, 100% 100%, 0 100%);
     display: block;

@@ -1,0 +1,120 @@
+@import './../../../styles/settings.scss';
+
+.tripRow {
+  display: flex;
+  height: 180px;
+  margin: auto auto;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  
+}
+
+.pictureColumn {
+  height: 100%;
+  width: 35%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.thumbnails {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border: solid 1px black;
+}
+
+.descriptionColumn {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+  border: 2px solid $color-light;
+  background-color: $color-light-background;
+  border-radius: 5px;
+}
+
+.title {
+  padding-top: 20px;
+  font-family: $font-text;
+  font-size: 18px;
+  min-height: 65%;
+  color: $color-secondary;
+}
+
+.country {
+  min-height: 35%;
+}
+
+.readMoreColumn {
+  max-width: 20%;
+  margin: auto auto;
+  text-align:center;
+  border: 1px solid $color-dark;
+  border-radius: 5px;
+  a {
+    color: $color-dark;
+  }
+  &:hover {
+    transform: none;
+    background-color: $color-secondary;
+    a {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 890px) {
+  .tripRow {
+    height: 150px;
+  }
+  .descriptionColumn {
+    width: 45%;
+  }
+  .title {
+    font-size: 13px;
+    
+  }
+  .country {
+    font-size: 12px;
+  }
+  .readMoreColumn {
+    max-width: 15%;
+    font-size: 10px;
+    padding: 0px;
+  }
+}
+
+
+@media (max-width: 770px) {
+  .tripRow {
+    height: 120px;
+  }
+  .title {
+    font-size: 11px;
+    padding-top: 5px;
+    min-height: 70px;
+  }
+  .country {
+    font-size: 11px;
+    min-height:30px;
+  }
+  .readMoreColumn {
+    max-width: 12%;
+    font-size: 10px;
+    a {
+      padding: 5px 10px !important;
+    }
+  }
+}
+

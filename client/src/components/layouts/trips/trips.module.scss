@@ -1,0 +1,22 @@
+@import './../../../styles/settings.scss';
+
+.offerHeader {
+  width:95%;
+  margin: auto auto;
+  font-size: 16px;
+  font-family: $font-text;
+  text-align: center;
+  border-top: 1px solid $color-light;
+  padding-top: 15px;
+  color: $color-dark;
+  font-weight: bold;
+}
+
+.mainGrid {
+  width: 95%;
+  margin: auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
