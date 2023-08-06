@@ -1,0 +1,77 @@
+@import './../../../styles/settings.scss';
+
+.header {
+  font-size: 16px;
+  color: black;
+}
+
+.inputRow {
+  margin-top: 10px;
+  display: inline-block;
+  height: 20px;
+}
+
+.minus {
+  padding: 0 4px;
+  border: 2px solid $color-dark;
+  margin-right: 8px;
+  border-radius: 4px;
+  height: 20px;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+    background-color: $color-dark;
+    border-color: black;
+    color: white;
+  }
+}
+
+.input {
+  text-align: center;
+  border: 2px solid $color-dark;
+  border-radius: 4px;
+  width: 30px;
+  height: 20px;
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.plus {
+  padding: 0 4px;
+  border: 2px solid $color-dark;
+  margin-left: 8px;
+  border-radius: 4px;
+  height: 20px;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+    background-color: $color-dark;
+    border-color: black;
+    color: white;
+  } 
+}
+
+.totalAmount {
+  color: black;
+}
+
+.button {
+  margin: auto auto;
+  margin-top: 18px;
+  color: white;
+  height: 30px;
+  width: 120px;
+  padding-top: 5px;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  &:hover {
+    color: $color-secondary;
+    font-weight: bold;
+  }
+}

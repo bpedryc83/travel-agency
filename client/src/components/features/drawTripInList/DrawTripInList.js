@@ -14,7 +14,9 @@ const DrawTripInList = props => <div className={`mb-4 ${styles.tripRow}`}>
   </div>
 
   <div className={`${styles.readMoreColumn}`}>
-    <Nav.Link as={Link} key={props.id} to={"/trips/" + props.id} className={styles.readMore}>Read more...</Nav.Link>
+    <div className={styles.readMore}>
+      <Nav.Link as={Link} key={props.id} to={"/trips/" + props.id} className={`${styles.navStyle}`} >Read more...</Nav.Link>
+    </div>
   </div>
 </div>
 

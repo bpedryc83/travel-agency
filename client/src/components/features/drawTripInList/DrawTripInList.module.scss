@@ -7,7 +7,7 @@
   align-items: center;
   width: 100%;
   padding: 10px;
-  
+  flex-wrap: wrap;
 }
 
 .pictureColumn {
@@ -28,7 +28,7 @@
 }
 
 .descriptionColumn {
-  width: 40%;
+  width: 45%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -51,9 +51,15 @@
 }
 
 .readMoreColumn {
-  max-width: 20%;
+  min-width: 20%;
   margin: auto auto;
   text-align:center;
+}
+
+.readMore {
+  text-align: center;
+  margin: auto auto;
+  width: 80%;
   border: 1px solid $color-dark;
   border-radius: 5px;
   a {
@@ -117,4 +123,56 @@
     }
   }
 }
+
+@media (max-width: 625px) {
+  .tripRow {
+    height: 110px;
+  }
+  .title {
+    font-size: 10px;
+    padding-top: 5px;
+    min-height: 70px;
+  }
+  .country {
+    font-size: 10px;
+    min-height:30px;
+  }
+  .readMoreColumn {
+    max-width: 12%;
+    font-size: 9px;
+    a {
+      padding: 5px 10px !important;
+    }
+  }
+}
+
+@media (max-width: 594px) {
+  .tripRow {
+    height: auto;
+    min-height: 180px;
+  }
+
+  .pictureColumn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .descriptionColumn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .readMoreColumn {
+    min-width: 100%;
+    .readMore {
+      max-width: 120px;
+      margin: auto auto;
+      .navStyle {
+        padding: 0px;
+        margin: auto auto;
+      }
+    }
+  }
+}
+
+
 
