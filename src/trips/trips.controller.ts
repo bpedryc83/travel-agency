@@ -54,7 +54,7 @@ export class TripsController {
   @UseInterceptors(
     FileInterceptor('mainPhoto', {
       storage: diskStorage({
-        destination: './src/public/uploads',
+        destination: './public/uploads',
         filename: editFileName,
       }),
       limits: { fileSize: 15728640 },
@@ -84,7 +84,7 @@ export class TripsController {
       throw new BadRequestException('Main photo is obligatory');
     }
 
-    const targetPath = `./public/uploads/${photo.filename}`;
+    const targetPath = `${photo.filename}`;
     return this.tripsService.create(targetPath, parsedTripData);
   }
 
@@ -92,7 +92,7 @@ export class TripsController {
   @UseInterceptors(
     FileInterceptor('mainPhoto', {
       storage: diskStorage({
-        destination: './src/public/uploads',
+        destination: './public/uploads',
         filename: editFileName,
       }),
       limits: { fileSize: 15728640 },
@@ -138,7 +138,7 @@ export class TripsController {
           console.error('Error while deleting the file:', err);
         }
       }
-      targetPath = `./public/uploads/${photo.filename}`;
+      targetPath = `${photo.filename}`;
     } else {
       targetPath = existingTrip.mainPhoto;
     }

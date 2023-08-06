@@ -38,7 +38,7 @@ export class PhotosController {
   @UseInterceptors(
     FileInterceptor('photo', {
       storage: diskStorage({
-        destination: './src/public/uploads',
+        destination: './public/uploads',
         filename: editFileName,
       }),
       limits: { fileSize: 15728640 },
@@ -53,7 +53,7 @@ export class PhotosController {
       throw new BadRequestException('Attach the file please');
     }
 
-    const targetPath = `./public/uploads/${photo.filename}`;
+    const targetPath = `${photo.filename}`;
     return this.photosService.create(targetPath, createTripPhotoDTO);
   }
 
