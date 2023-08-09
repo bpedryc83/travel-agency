@@ -42,7 +42,7 @@ const SingleTrip = () => {
                 <p><span className="fw-bold">People in group (max): </span><span>{singleTrip.maxPeopleAmount}</span></p>
                 <p className={`${styles.last}`}><span className="fw-bold">Price from: </span><span>{singleTrip.price} PLN</span></p>
                 <div className="justify-content-center text-center pt-3">
-                  <AddToCart maxPeopleAmount = { singleTrip.maxPeopleAmount } price = { singleTrip.price } />
+                  <AddToCart maxPeopleAmount = { singleTrip.maxPeopleAmount } price = { singleTrip.price } tripId = { singleTrip.id } />
                 </div>
               </div>
             </div>

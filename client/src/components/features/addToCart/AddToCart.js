@@ -1,25 +1,18 @@
 import styles from './AddToCart.module.scss';
 import { useState } from 'react';
+import { saveTripInCart } from '../../../redux/cartThunks';
+import { useDispatch } from 'react-redux'; 
+import SetAmount from '../setAmount/SetAmount';
+
 
 const AddToCart = props => {
 
   const [peopleAmount, setPeopleAmount] = useState(1);
+  const dispatch = useDispatch();
 
-  const minusOne = (e) => {
+  const addTriptoCart = (e, tripId, peopleAmount) => {
     e.preventDefault();
-    if (peopleAmount > 1) {
-      setPeopleAmount(peopleAmount - 1);
-    }
-  }
-  const plusOne = (e) => {
-    e.preventDefault();
-    if (peopleAmount < props.maxPeopleAmount) {
-      setPeopleAmount(peopleAmount + 1);
-    }
-  }
-
-  const addTriptoCart = (e) => {
-    e.preventDefault();
+    dispatch(saveTripInCart( tripId, peopleAmount ));
   }
 
   return (
@@ -28,17 +21,13 @@ const AddToCart = props => {
         SELECT NUMBER OF PEOPLE
       </div>
 
-      <div className={`${styles.inputRow}`}>
-        <span className={`${styles.minus}`} onClick={e => minusOne(e)} onMouseDown={e => e.preventDefault()}>-</span>
-        <input value={peopleAmount} type="number" minLength="1" maxLength="2" min="1" max="20" className={`${styles.input}`} readOnly></input> 
-        <span className={`${styles.plus}`} onClick={e => plusOne(e)} onMouseDown={e => e.preventDefault()}>+</span>
-      </div>
+      <SetAmount peopleAmount = { peopleAmount } setPeopleAmount = { setPeopleAmount } maxPeopleAmount = { props.maxPeopleAmount }/>
 
       <div className='mt-2'>
         <span className={`${styles.totalAmount}`}>Total price: <span className='fw-bold'>{props.price * peopleAmount}</span> PLN </span> 
       </div>
 
-      <div className={`${styles.button}`}>
+      <div className={`${styles.button}`} onClick={e => addTriptoCart(e, props.tripId, peopleAmount)}>
         ADD TO CART
       </div>
     </div>

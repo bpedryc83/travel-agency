@@ -1,0 +1,19 @@
+@import './../../../styles/settings.scss';
+
+.mainGrid {
+  width: 95%;
+  margin: auto auto;
+  flex-wrap: wrap;
+}
+
+.cartHeader {
+  padding: 7px 12px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  background-color: $color-secondary;
+  color: white;
+  border-radius: 20px;
+}

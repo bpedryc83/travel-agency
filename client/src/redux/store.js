@@ -1,9 +1,11 @@
 import {createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import tripsReducer from './tripsRedux';
+import cartReducer from './cartRedux';
 
 const subreducers = {
   trips: tripsReducer,
+  cart: cartReducer,
 };
 
 const reducer = combineReducers(subreducers);

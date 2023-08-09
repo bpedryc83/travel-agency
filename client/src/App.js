@@ -10,6 +10,7 @@ import Footer from "./components/layouts/footer/footer";
 //Pages
 import Home from "./components/pages/home/home";
 import SingleTrip from './components/pages/singleTrip/SingleTrip';
+import Cart from './components/pages/cart/Cart';
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="trips/:id" element={<SingleTrip />} />
+          <Route path="cart" element={<Cart />} />
         </Routes>
       <Footer />
     </div>

@@ -1,0 +1,55 @@
+@import './../../../styles/settings.scss';
+
+.inputRow {
+  margin-top: 10px;
+  display: inline-block;
+  height: 20px;
+}
+
+.input {
+  text-align: center;
+  border: 2px solid $color-dark;
+  border-radius: 4px;
+  width: 30px;
+  height: 20px;
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.minus {
+  padding: 0 4px;
+  border: 2px solid $color-dark;
+  margin-right: 8px;
+  border-radius: 4px;
+  height: 20px;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+    background-color: $color-dark;
+    border-color: black;
+    color: white;
+  }
+}
+
+.plus {
+  padding: 0 4px;
+  border: 2px solid $color-dark;
+  margin-left: 8px;
+  border-radius: 4px;
+  height: 20px;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+    background-color: $color-dark;
+    border-color: black;
+    color: white;
+  } 
+}
+
+.totalAmount {
+  color: black;
+}

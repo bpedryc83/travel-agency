@@ -1,0 +1,135 @@
+@import './../../../styles/settings.scss';
+
+.main {
+  display: block;
+  margin: auto auto;;
+}
+
+.cartItemRow {
+  height: 100px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.divThumbnail {
+  height: 100%;
+  min-width: 130px;
+  margin-right: 10px;
+}
+
+.thumbnail {
+  height: 100%;
+  object-fit: cover;
+}
+
+.setAmount {
+  padding-left: 25px;
+  text-align: center;
+  align-items: center;
+  width: 25%;
+}
+
+.divRestData {
+  border-top: 1px solid $color-light;
+  border-bottom: 1px solid $color-light;
+  border-radius: 25px;
+  padding: 5px 15px;
+  width: 50%;
+  height: 100%;
+}
+
+.itemInfo {
+  color: black;
+}
+
+.totalItemPrice {
+  font-size: 16px;
+  margin-bottom: 0;
+  text-align: center;
+  color: $color-secondary;
+  align-items: end;
+  font-weight: bold;
+}
+
+.buttonActive {
+  margin: auto auto;
+  margin-top: 18px;
+  color: white;
+  height: 30px;
+  width: 120px;
+  padding-top: 7px;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  &:hover {
+    color: $color-secondary;
+    font-weight: bold;
+  }
+}
+
+.buttonNotActive {
+  margin: auto auto;
+  margin-top: 18px;
+  color: white;
+  height: 30px;
+  width: 120px;
+  padding-top: 7px;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.cartItemSecondRow {
+  height: 100px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.divFreespace {
+  height: 100%;
+  min-width: 130px;
+  margin-right: 10px;
+}
+
+.divTextarea {
+  width: 50%;
+}
+
+.divRemoveItem {
+  display: flex;
+  padding-left: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+
+}
+
+.removeItem {
+  padding: 5px 12px;
+  font-size: 13px;
+  background-color: $color-warning;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.bottomLine {
+  width: 95%;
+  height: 15px;
+  border-bottom: 1px solid $color-light;
+}
