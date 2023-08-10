@@ -47,12 +47,6 @@ const initialState = {
 
 export default function reducer(statePart = initialState, action = {}) {
   switch (action.type) {
-    // case ADD_TRIPS:
-    //   return { ...statePart, data: [...statePart.data, action.payload] };
-    // case EDIT_TRIPS:
-    //   return { ...statePart, data: statePart.data.map(ann => ann._id === action.payload._id ? { ...ann, ...action.payload } : ann) };
-    // case DELETE_TRIPS:
-    //   return { ...statePart, data: statePart.data.filter(ann => ann._id !== action.payload._id) };
     case LOAD_TRIPS:
       return { ...statePart, data: [...action.payload] };
     case START_REQUEST:

@@ -1,4 +1,36 @@
+@import './../../../styles/settings.scss';
+
 .mainGrid {
   margin: auto auto;
   flex-wrap: wrap;
+}
+
+.totalPrice {
+  width: 50%;
+  padding: 7px 12px;
+  text-align: center;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-secondary;
+  color: white;
+  border-radius: 20px;
+}
+
+.confirmation { 
+  margin-top: 20px;
+  width: 30%;
+  padding: 7px 12px;
+  text-align: center;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    color: $color-secondary;
+    font-weight: bold;
+  }
 }

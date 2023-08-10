@@ -36,7 +36,7 @@ const DrawCartItem = ( {cartItemTripData} ) => {
           <div className={`${styles.itemInfo}`}>
             <p className='mb-1 fw-bold'>{cartItemTripData.title}</p>
             <p className='mb-2 text-center'>Country: {cartItemTripData.country}</p>
-            <p className={`${styles.totalItemPrice}`}>TOTAL PRICE: {cartItemTripData.price * peopleAmount}</p>
+            <p className={`${styles.totalItemPrice}`}>TOTAL PRICE: {cartItemTripData.price * peopleAmount} PLN</p>
           </div> 
         </div>
 

@@ -11,6 +11,7 @@ import Footer from "./components/layouts/footer/footer";
 import Home from "./components/pages/home/home";
 import SingleTrip from './components/pages/singleTrip/SingleTrip';
 import Cart from './components/pages/cart/Cart';
+import OrderConfirm from './components/pages/orderConfirm/OrderConfirm';
 
 const App = () => {
 
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="trips/:id" element={<SingleTrip />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="cart/confirmation" element={<OrderConfirm />} />
         </Routes>
       <Footer />
     </div>

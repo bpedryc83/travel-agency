@@ -18,7 +18,8 @@ const Cart = () => {
   return (
     <Container className={`d-block pb-3`}>
       <div className={`d-flex ${styles.mainGrid}`}>
-        <div className={`${styles.cartHeader}`}>YOUR CART</div>      
+        {cartItems.length > 0 && <div className={`${styles.cartHeader}`}>YOUR CART</div>}
+        {cartItems.length === 0 && <div className={`${styles.cartHeaderWarning}`}>YOUR CART IS EMPTY</div>}      
       </div>
       {cartItems && <InitDrawCartItem cartItems = { cartItems } />}
     </Container>
