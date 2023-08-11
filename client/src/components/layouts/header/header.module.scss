@@ -28,6 +28,7 @@
   padding: 5px 15px;
   border-radius: 20px;
   color: white !important;
+  margin-right: 8px;
 }
 
 .company {
@@ -81,6 +82,7 @@
   }
   .textBackground {
     padding: 3px 5px !important;
+    margin-right: 5px;
   }
   .textMenu {
     max-height: 35px;
@@ -108,12 +110,23 @@
   }
 }
 
+@media (max-width: 652px) {
+  .textBackground {
+    text-align: center;
+  }
+}
+
 @media (max-width: 610px) {
   .textMenu {
     font-size: 12px;
   }
   .company {
     font-size: 18px;
+  }
+  .textBackground {
+    text-align: center;
+    padding: 5px 5px;
+    margin-right: 0;
   }
   .cart {
     margin-left: 5px;

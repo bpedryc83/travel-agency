@@ -29,10 +29,6 @@ async function bootstrap() {
   app.use(express.static(join(__dirname, '../../', '/public')));
   const server = await app.listen(8000);
 
-  // app.get('*', (_req, res): string => {
-  //   res.sendFile(path.join(__dirname, '/client/build/index.html'));
-  // });
-
   server.prependListener('request', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
   });

@@ -14,6 +14,8 @@ import SingleTrip from './components/pages/singleTrip/SingleTrip';
 import Cart from './components/pages/cart/Cart';
 import OrderConfirmation from './components/pages/orderConfirmation/OrderConfirmation';
 import { initializeOrder } from './redux/orderRedux';
+import Login from './components/pages/login/login';
+import Register from './components/pages/register/Register';
 
 const App = () => {
 
@@ -40,6 +42,8 @@ const App = () => {
           <Route path="trips/:id" element={<SingleTrip />} />
           <Route path="cart" element={<Cart />} />
           <Route path="cart/confirmation" element={<OrderConfirmation />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
         </Routes>
       <Footer />
     </div>

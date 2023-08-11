@@ -7,13 +7,11 @@ export const getTempOrderItems = state => state.order;
 export const initializeOrder = () => {
   return (dispatch) => {
     const tempOrder = loadOrderDataFromLS();
-    console.log('orderfromLS: ', tempOrder);
     dispatch({ type: 'INITIALIZE_TEMP_ORDER', payload: tempOrder });
   };
 };
 
 export const addTempOrder = (tempOrder) => {
-  console.log('temp: ', tempOrder);
   return {
     type: 'ADD_TEMP_ORDER_REDUX',
     payload: tempOrder ,

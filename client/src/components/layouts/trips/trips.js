@@ -12,9 +12,6 @@ const Trips = () => {
   const loadedData = useSelector(getAllTrips);
   useEffect(() => {
     setAllTrips(loadedData);
-    // if(loadedData){
-    //   setisLoading(false);
-    // }
   }, [loadedData]);
 
   return (

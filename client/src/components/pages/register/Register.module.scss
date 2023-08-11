@@ -1,0 +1,27 @@
+@import './../../../styles/settings.scss';
+
+.mainDiv {
+  text-align: center;
+  width: 95%;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.information {
+  margin: auto auto;
+  border-top: 1px solid $color-light;
+  border-bottom: 1px solid $color-light;
+  border-radius: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 500px;
+  .text {
+    padding: 8px 12px;
+    font-size: 13px;
+    background-color: $color-warning;
+    color: white;
+    border-radius: 20px;
+  }
+}
+
