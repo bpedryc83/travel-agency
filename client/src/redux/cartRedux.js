@@ -1,7 +1,16 @@
+import { loadCartFromLS } from "./cartThunks";
+
 //selectors
 export const getCartItems = state => state.cart;
 
 // actions
+export const initializeCart = () => {
+  return (dispatch) => {
+    const cart = loadCartFromLS();
+    dispatch({ type: 'INITIALIZE_CART', payload: cart });
+  };
+};
+
 export const addToCartRedux = (tripId, peopleAmount) => {
   return {
     type: 'ADD_TO_CART_REDUX',
@@ -27,6 +36,8 @@ const initialCartState = [];
 
 export default function reducer (state = initialCartState, action = {}) {
   switch (action.type) {
+    case 'INITIALIZE_CART':
+      return action.payload;
     case 'ADD_TO_CART_REDUX':
       return [...state, action.payload]
     case 'UPDATE_CART_ITEM':

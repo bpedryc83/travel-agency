@@ -6,25 +6,10 @@ const saveCartInLS = (cart) => {
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 
-// const loadCartFromLS = () => {
-//   const cartData = localStorage.getItem('cart');
-//   return cartData ? JSON.parse(cartData) : [];
-// };
-
-// export const initializeCart = () => {
-//   return (dispatch) => {
-//     const cart = loadCartFromLS();
-//     dispatch({ type: 'INITIALIZE_CART', payload: cart });
-//   };
-// };
-
-// export const saveTripInCart = (tripId, peopleAmount) => {
-//   return (dispatch, getState) => {
-//     dispatch(addToCartRedux(tripId, peopleAmount));
-//     const updatedCart = getState().cart;
-//     saveTripInLS(updatedCart);
-//   };
-// };
+export const loadCartFromLS = () => {
+  const cartData = localStorage.getItem('cart');
+  return cartData ? JSON.parse(cartData) : [];
+};
 
 export const saveTripInCart = (tripId, peopleAmount) => {
   return (dispatch, getState) => {

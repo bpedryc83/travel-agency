@@ -1,12 +1,16 @@
 import { getTripById } from '../../../redux/tripsRedux';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { useMemo } from 'react';
+import { useDispatch } from 'react-redux';
 import styles from './InitDrawCartItem.module.scss';
 import DrawCartItem from '../drawCartItem/DrawCartItem';
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { saveTempOrder } from '../../../redux/orderThunks';
 
 const InitDrawCartItem = props => {
+  const dispatch = useDispatch();
+
   const cartTripsIds = props.cartItems.map(item => item.tripId);
   
   const cartTrips = useSelector(state => {
@@ -22,6 +26,7 @@ const InitDrawCartItem = props => {
       country: matchingTrip.country,
       mainPhoto: matchingTrip.mainPhoto,
       maxPeopleAmount: matchingTrip.maxPeopleAmount,
+      remarks: ''
     }
   });
 
@@ -29,6 +34,10 @@ const InitDrawCartItem = props => {
     return cartItemsTripData.reduce((total, current)=>{return total + (current.price * current.peopleAmount)}
     , 0);
   }, [cartItemsTripData]);
+
+  const saveUnconfirmedOrder = () => {
+    dispatch(saveTempOrder(cartItemsTripData));
+  } 
 
   return (
     <div>
@@ -40,11 +49,13 @@ const InitDrawCartItem = props => {
       <div className={`${styles.totalPrice}`}>
         TOTAL PRICE FOR CART: {totalPrice} PLN
       </div>
-      <Nav.Link className="p-0" as={Link} to="confirmation">
-        <div className={`${styles.confirmation}`}>
-          GO TO ORDER CONFIRMATION
-        </div>
-      </Nav.Link>
+      {cartItemsTripData.length>0 &&
+        <Nav.Link className="p-0" as={Link} to="confirmation">
+          <div className={`${styles.confirmation}`} onClick={saveUnconfirmedOrder}>
+            GO TO ORDER CONFIRMATION
+          </div>
+        </Nav.Link>
+      } 
     </div>
   )
 }

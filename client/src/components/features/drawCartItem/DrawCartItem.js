@@ -25,6 +25,11 @@ const DrawCartItem = ( {cartItemTripData} ) => {
     dispatch(deleteTripFromCart( tripId ));
   }
 
+  const updateTripRemarks = (e) => {
+    setTripRemarks(e.target.value);
+    cartItemTripData.remarks = e.target.value;
+  }
+
   return (
     <div className={`${styles.main}`}>
       <div className={`${styles.cartItemRow}`}>
@@ -60,7 +65,7 @@ const DrawCartItem = ( {cartItemTripData} ) => {
               id="tripRemarks"
               rows="4"
               value={tripRemarks}
-              onChange={e => setTripRemarks(e.target.value)}
+              onChange={e => updateTripRemarks(e)}
               style={{ width: '100%', resize: 'vertical' }}
           />
         </div>

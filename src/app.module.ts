@@ -16,11 +16,11 @@ import { PhotosModule } from './photos/photos.module';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '../../', 'client', 'build'),
+    }),
     TripsModule,
     OrdersModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-    }),
     MulterModule.register({
       dest: './public/uploads',
     }),

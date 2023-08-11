@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { loadTripsRequest } from "./redux/tripsRedux";
+import { initializeCart } from './redux/cartRedux';
 
 //Layouts
 import Header from "./components/layouts/header/header";
@@ -11,7 +12,8 @@ import Footer from "./components/layouts/footer/footer";
 import Home from "./components/pages/home/home";
 import SingleTrip from './components/pages/singleTrip/SingleTrip';
 import Cart from './components/pages/cart/Cart';
-import OrderConfirm from './components/pages/orderConfirm/OrderConfirm';
+import OrderConfirmation from './components/pages/orderConfirmation/OrderConfirmation';
+import { initializeOrder } from './redux/orderRedux';
 
 const App = () => {
 
@@ -22,6 +24,14 @@ const App = () => {
     dispatch(loadTripsRequest());
   }, [dispatch]);
 
+  useEffect(() => {
+    dispatch(initializeCart());
+  }, []);
+
+  useEffect(() => {
+    dispatch(initializeOrder());
+  }, []);
+
   return (
     <div className="mainContainer">
       <Header />
@@ -29,7 +39,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="trips/:id" element={<SingleTrip />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="cart/confirmation" element={<OrderConfirm />} />
+          <Route path="cart/confirmation" element={<OrderConfirmation />} />
         </Routes>
       <Footer />
     </div>

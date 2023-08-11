@@ -1,0 +1,49 @@
+@import './../../../styles/settings.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto auto;
+  margin-bottom: 25px;
+}
+
+.confirmationItemRow {
+  border-top: 2px solid $color-light;
+  border-bottom: 2px solid $color-light;
+  border-radius: 25px;
+  padding-top: 20px;
+  width: 600px;
+}
+
+.divThumbnail {
+  flex: 0 0 auto;
+  margin: auto auto;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail {
+  height: 130px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.divRestData {
+
+  padding: 5px 15px;
+  margin-top: 10px;
+  min-width: 280px; 
+}
+
+.itemPrice {
+  font-size: 16px;
+  margin: auto auto;
+  margin-bottom: 0;
+  text-align: center;
+  color: $color-secondary;
+  align-items: end;
+  font-weight: bold;
+}

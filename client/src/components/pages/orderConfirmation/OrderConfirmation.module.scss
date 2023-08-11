@@ -1,0 +1,67 @@
+@import './../../../styles/settings.scss';
+
+.mainGrid {
+  width: 95%;
+  margin: auto auto;
+  flex-wrap: wrap;
+}
+
+.orderHeader {
+  width: 210px;
+  text-align: center;
+  padding: 7px 12px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  background-color: $color-secondary;
+  color: white;
+  border-radius: 20px;
+}
+
+.bottomLine {
+  margin: auto auto;
+  width: 95%;
+  height: 15px;
+  border-bottom: 1px solid $color-light;
+}
+
+.totalPrice {
+  width: 50%;
+  padding: 7px 12px;
+  text-align: center;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-secondary;
+  color: white;
+  border-radius: 20px;
+}
+
+.divContactForm {
+  margin: auto auto;
+  width: 250px;
+}
+
+.contactForm {
+  width: 250px;
+}
+
+.sendOrder { 
+  margin-bottom: 20px;
+  width: 30%;
+  padding: 7px 12px;
+  text-align: center;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    color: $color-secondary;
+    font-weight: bold;
+  }
+}
