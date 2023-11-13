@@ -34,3 +34,18 @@
     font-weight: bold;
   }
 }
+
+@media (max-width: 804px) {
+  .totalPrice {
+    width: 75%;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .confirmation { 
+    margin-top: 20px;
+    width: 60%;
+    font-size: 12px;
+    border-radius: 12px;
+  }
+}

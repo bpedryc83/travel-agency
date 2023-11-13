@@ -2,7 +2,7 @@
 
 .main {
   display: block;
-  margin: auto auto;;
+  margin: auto auto;
 }
 
 .cartItemRow {
@@ -113,12 +113,11 @@
   justify-content: center;
   align-items: center;
   width: 25%;
-
 }
 
 .removeItem {
-  padding: 5px 12px;
-  font-size: 13px;
+  padding: 5px 10px;
+  font-size: 9px;
   background-color: $color-warning;
   color: white;
   border-radius: 20px;
@@ -133,4 +132,69 @@
   width: 95%;
   height: 15px;
   border-bottom: 1px solid $color-light;
+}
+
+@media (max-width: 804px) {
+  .main {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .cartItemRow {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+
+  .divThumbnail {
+    width: 100%;
+    height: 220px; 
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .divRestData {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px 50px;
+    text-align: center;
+  }
+
+  .setAmount {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .divTextarea {
+    text-align: center;
+    margin: auto auto;
+    width: 75%;
+  }
+
+  .divFreespace {
+    height: 100%;
+    min-width: 0;
+    margin-right: 0;
+  }
+
+  .divRemoveItem {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .bottomLine {
+    min-height: 35px;
+    padding-top: 35px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 435px) {
+  .divThumbnail {
+    height: 150px; 
+    margin-bottom: 20px;
+  }
 }

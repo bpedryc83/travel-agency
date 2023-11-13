@@ -71,7 +71,7 @@ const DrawCartItem = ( {cartItemTripData} ) => {
         </div>
 
         <div className={`${styles.divRemoveItem}`}>
-          <div className={`${styles.removeItem}`} onClick={e => removeTripFromCart(e, cartItemTripData.tripId)}>REMOVE</div>
+          <div className={`${styles.removeItem}`} onClick={e => removeTripFromCart(e, cartItemTripData.tripId)}>REMOVE ITEM</div>
         </div>
       </div>
 
