@@ -1,12 +1,27 @@
-Witam,
-przesłany linkiem adres do najnowszego commita zawiera najnowszą, działającą, choć nieskończoną wersję projektu.
+# Travel Agency
 
-Z zasadniczych braków w stosunku do założeń:
-- brak opublikowanej wersji, chociaż baza danych jest podpięta zdalnie. Miałem problem na render.com.
-- dla stron z koszykiem oraz podsumowaniem zamówienia nie jest wdrożone RWD,
-- przycisk w podsumowaniu zamówienia nie prowadzi do fizycznego dodania w bazie wpisu o zamówieniu (chociaż backend jest generalnie przygotowany)
-- localStorage przechowuje dane o koszyku i drafcie zamówienia, jednak przy odświeżeniu na stronie ("tylko") koszyka dochodzi do błędu.
+The travel agency website presents the current offers and allows the convenient purchase of trips.
 
-To chyba najważniejsze braki o których wiem i będę poprawiał już od następnego tygodnia czyli po kursie :)
+## [Demo (click)](https://travel-agency-k39m.onrender.com/)
 
-Będę wdzięczny za sprawdzenie i uwagi, choć troszkę mi brakło czasu aby zrealizować wszystkie wymagania projektu końcowego.  
+## Technologies
+
+- HTML
+- CSS/SCSS
+- RWD
+- Node.js
+- TypeScript
+- MySQL
+- Prisma
+- React
+- Redux
+
+The application was entirely created and developed by the single author, Bartłomiej Pedryc. This is an application covering both backend and frontend, providing a comprehensive user experience.
+
+## Screenshots
+
+## Main page displayed on big screens
+  <img src="src/images/lists.jpg" width="620" />
+  
+## Main page displayed on small devices
+  <img src="src/images/columns_cards.jpg" width="620" />

@@ -10,20 +10,13 @@ exports.PrismaService = void 0;
 const common_1 = require("@nestjs/common");
 const client_1 = require("@prisma/client");
 let PrismaService = exports.PrismaService = class PrismaService extends client_1.PrismaClient {
-    async onModuleDestroy() {
-        await this.$disconnect();
-    }
     async onModuleInit() {
         await this.$connect();
     }
     async enableShutdownHooks(app) {
-        const handleAppClose = async () => {
+        this.$on('beforeExit', async () => {
             await app.close();
-            await this.$disconnect();
-            process.exit(0);
-        };
-        process.on('SIGTERM', handleAppClose);
-        process.on('SIGINT', handleAppClose);
+        });
     }
 };
 exports.PrismaService = PrismaService = __decorate([
