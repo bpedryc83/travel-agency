@@ -8,7 +8,6 @@ import DrawConfirmationItem from "../../features/drawConfirmationItem/DrawConfir
 const OrderConfirmation = props => {
 
   const orderItems = useSelector(getTempOrderItems);
-
   
   const totalPrice = useMemo(() => {
     return orderItems.reduce((total, current)=>{return total + (current.price * current.peopleAmount)}
@@ -51,7 +50,6 @@ const OrderConfirmation = props => {
         </div>
 
         <div className={`${styles.sendOrder}`}>
-        {/* <div className={`${styles.sendOrder}`} onClick={saveUnconfirmedOrder}> */}
           SEND ORDER
         </div>
       </div>

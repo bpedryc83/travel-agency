@@ -11,9 +11,7 @@ const Home = () => {
         <div className={`d-flex ${styles.mainGrid}`}>
           <div className={`${styles.leftColumn}`}>
             <div className={`d-flex ${styles.sentence}`}>
-              <div className="d-flex align-items-end"> 
-                WITH US YOU WILL FIND THE SPIRIT OF THE MOUNTAIN
-              </div>
+              WITH US YOU WILL FIND THE SPIRIT OF THE MOUNTAIN
             </div>
 
             <div className={`${styles.aboutUs}`}>
