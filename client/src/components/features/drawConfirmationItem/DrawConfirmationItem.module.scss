@@ -19,7 +19,7 @@
 .divThumbnail {
   flex: 0 0 auto;
   margin: auto auto;
-  margin-right: 10px;
+  //margin-right: 10px;
   display: flex;
   justify-content: center;
 }
@@ -32,7 +32,6 @@
 }
 
 .divRestData {
-
   padding: 5px 15px;
   margin-top: 10px;
   min-width: 280px; 
@@ -46,4 +45,22 @@
   color: $color-secondary;
   align-items: end;
   font-weight: bold;
+}
+
+@media (max-width: 804px) {
+  
+  .confirmationItemRow {
+    border-radius: 20px;
+    padding-top: 20px;
+    width: 90%;
+  }
+
+  .divRestData {
+    padding: 5px 15px;
+    min-width: 100%; 
+  }
+
+  .itemPrice {
+    font-size: 14px;
+  }
 }

@@ -22,8 +22,8 @@ const OrderConfirmation = props => {
         {orderItems.map(orderItem => 
           <DrawConfirmationItem orderItem = { orderItem } key={`${orderItem.tripId}`} />
         )}
-      
         <div className={`${styles.totalPrice}`}>
+
           TOTAL PRICE FOR ORDER: {totalPrice} PLN
         </div>
           
@@ -31,24 +31,24 @@ const OrderConfirmation = props => {
         </div>
 
         <div className={`${styles.divContactForm}`}>
-          <form className={`${styles.contactForm}`}>
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label">Name</label>
-                <input type="text" className="form-control" id="name" required />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="phone" className="form-label">Phone</label>
-                <input type="text" className="form-control" id="phone" required/>
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">E-mail</label>
-                <input type="email" className="form-control" id="email" required/>
-              </div>
-            </form>
-          </div>
+          <form>
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">Name</label>
+              <input type="text" className="form-control" id="name" autoComplete="off" required />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="phone" className="form-label">Phone</label>
+              <input type="text" className="form-control" id="phone" autoComplete="off" required/>
+            </div>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">E-mail</label>
+              <input type="email" className="form-control" id="email" autoComplete="off" required/>
+            </div>
+          </form>
+        </div>
 
-          <div className={`mb-4 ${styles.bottomLine}`}>
-          </div>
+        <div className={`mb-4 ${styles.bottomLine}`}>
+        </div>
 
         <div className={`${styles.sendOrder}`}>
         {/* <div className={`${styles.sendOrder}`} onClick={saveUnconfirmedOrder}> */}

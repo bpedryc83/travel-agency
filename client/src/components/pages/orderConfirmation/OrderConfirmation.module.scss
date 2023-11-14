@@ -44,10 +44,6 @@
   width: 250px;
 }
 
-.contactForm {
-  width: 250px;
-}
-
 .sendOrder { 
   margin-bottom: 20px;
   width: 30%;
@@ -63,5 +59,37 @@
   &:hover {
     color: $color-secondary;
     font-weight: bold;
+  }
+}
+
+@media (max-width: 804px) {
+  .totalPrice {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .sendOrder { 
+    width: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .orderHeader {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .totalPrice {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .sendOrder { 
+    width: 75%;
+  }
+
+  .divContactForm {
+    margin: auto auto;
+    width: 95%;
   }
 }

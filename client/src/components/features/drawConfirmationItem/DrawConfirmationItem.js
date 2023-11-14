@@ -1,10 +1,7 @@
 import styles from './DrawConfirmationItem.module.scss';
 import { IMGS_URL } from '../../../config';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 
-const DrawConfirmationItem = ( { orderItem } ) => {
-  return (
+const DrawConfirmationItem = ( { orderItem } ) => 
     <div className={`${styles.main}`}>
       <div className={`${styles.confirmationItemRow}`}>
         <div className={`${styles.divThumbnail}`}>
@@ -22,7 +19,5 @@ const DrawConfirmationItem = ( { orderItem } ) => {
         </div>
       </div>
     </div>
-  )
-}
 
 export default DrawConfirmationItem;
