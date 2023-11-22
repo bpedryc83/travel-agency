@@ -37,8 +37,10 @@ The application was entirely created and developed by the single author, Bartło
 
 ## Part of schema.prisma file 
   Selected part of the prisma.schema file containing the definitions of data models, as well as relations between tables in the MySQL database.
+
   <img src="src/images/prisma.jpg" width="620" />
 
 ## Postman
   The validity of endpoint functionality for certain methods was verified using the Postman application.
+  
   <img src="src/images/postman.jpg" width="620" />
