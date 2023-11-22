@@ -8,7 +8,7 @@
   width: 100%;
   padding: 10px;
   flex-wrap: wrap;
-  background-color: lighten($color-dark, $amount: 35); //
+  //background-color: $color-background-row-trip;
   border-radius: 8px;
 }
 
@@ -27,6 +27,7 @@
   max-width: 100%;
   object-fit: cover;
   border: solid 1px $color-dark;
+  border-radius: 6px;
 }
 
 .descriptionColumn {
@@ -35,28 +36,26 @@
   display: flex;
   flex-direction: column;
   padding: 0 25px;
-  border: 4px solid $color-light;  //2px
-  background-color: $color-light-background; //
-  //background-color: $color-light-background;
-  border-radius: 0px;
+  border-top: 2px solid $color-light;
+  border-bottom: 2px solid $color-light;
+  background-color: $color-light-background;
+  border-radius: 20px;
 }
 
 .title {
   padding-top: 20px;
   font-family: $font-text;
   font-size: 18px;
-  min-height: 75%;
+  min-height: 82%;
   color: $color-secondary;
   text-align: center;
   font-weight: 600;
-  //color: $color-secondary;
 }
 
 .country {
-  background-color: $color-light; //
-  height: 25%;
+  height: 18%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 4px;
   color: $color-dark;
 }
 
