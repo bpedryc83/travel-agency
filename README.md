@@ -16,7 +16,7 @@ The travel agency website presents the current offers and allows the convenient 
 - React
 - Redux
 
-The application was entirely created and developed by the single author, Bartłomiej Pedryc. This is an application covering both backend and frontend, providing a comprehensive user experience. The application operates on a MySQL database on a remote server, and database operations are performed using the Prisma tool in TypeScript.
+The application was entirely created and developed by the single author, Bartłomiej Pedryc. This is an application covering both backend and frontend, providing a comprehensive user experience. The application operates on a MySQL database on remote server, and database operations are performed using the Prisma tool in TypeScript.
 
 ## Screenshots
 
@@ -36,14 +36,9 @@ The application was entirely created and developed by the single author, Bartło
   <img src="src/images/order.jpg" width="620" />
 
 ## Part of schema.prisma file 
-  Selected part from the prisma.schema file containing the definitions of data models, as well as relations between tables in the MySQL database.
+  Selected part of the prisma.schema file containing the definitions of data models, as well as relations between tables in the MySQL database.
   <img src="src/images/prisma.jpg" width="620" />
 
 ## Postman
-  The validity of endpoint functionality for certain methods was verified using, for example, the Postman application.
+  The validity of endpoint functionality for certain methods was verified using the Postman application.
   <img src="src/images/postman.jpg" width="620" />
-
-## MySql
-  An example of MySQL table used in the application. 
-  <img src="src/images/mysql.jpg" width="620" />
-
