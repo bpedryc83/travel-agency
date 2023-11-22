@@ -30,7 +30,7 @@ The application was entirely created and developed by the single author, Bartło
   <img src="src/images/tripdetails.jpg" width="620" />
 
 ## Cart content
-  <img src="src/images/cartitem.jpg" width="620" />
+  <img src="src/images/cart.jpg" width="620" />
 
 ## Order confirmation subpage
   <img src="src/images/order.jpg" width="620" />
